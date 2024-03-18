@@ -1,0 +1,31 @@
+{
+  "name": "strapi",
+  "activationEvents": [
+    "onCommand:strapi.start"
+  ],
+  "engines": {
+    "strapi": "4.20.5"
+  },
+  "scripts": {
+    "postinstall": "node node_modules/strapi/bin/strapi.js install",
+    "start": "strapi start",
+    "develop": "strapi develop",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "strapi": "4.20.5",
+    "strapi-location-field-plugin": "^1.2.1",
+    "strapi-plugin-oembed": "^1.2.1"
+  },
+  "devDependencies": {
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "strapi.start",
+        "title": "Start Strapi"
+      }
+    ]
+  }
+}
